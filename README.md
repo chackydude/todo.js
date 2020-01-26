@@ -1,2 +1,0 @@
-# todo.js
-ToDo app

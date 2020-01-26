@@ -16,6 +16,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WuFOpOYQalbNiKK4YWWr8a4hIm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../nodeJS/node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../nodeJS/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
@@ -67,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579991543514</updated>
       <workItem from="1579991545518" duration="3246000" />
-      <workItem from="1580017065352" duration="13084000" />
+      <workItem from="1580017065352" duration="17187000" />
     </task>
     <servers />
   </component>
