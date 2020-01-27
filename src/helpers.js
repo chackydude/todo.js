@@ -1,3 +1,6 @@
+// helper classes and functions
+
+// creates DOM - elements
 function createElement(tag, props, ...children) {
     const element = document.createElement(tag);
 
@@ -19,7 +22,7 @@ function createElement(tag, props, ...children) {
 
     return element;
 }
-
+// pattern Publish - Subscribe
 class EventEmitter {
     constructor() {
         this.events = {};
@@ -37,6 +40,7 @@ class EventEmitter {
     }
 }
 
+//
 function save(data) {
     const string = JSON.stringify(data);
 

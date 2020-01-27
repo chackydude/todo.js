@@ -1,4 +1,4 @@
-// connect model & view
+// connect model & view, all changes of model => changes of view
 class Controller {
     constructor(model, view) {
         this.model = model;
@@ -12,6 +12,7 @@ class Controller {
         view.show(model.items);
     }
 
+    // makes request to model to create object, to view to display objects
     addTodo(title) {
         const item = this.model.addItem({
             id: Date.now(),

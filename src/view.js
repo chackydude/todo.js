@@ -1,4 +1,4 @@
-// edit DOM elements (add & remove elements)
+// edit DOM elements (add & remove elements), representation of Model
 import { EventEmitter, createElement } from './helpers';
 
 class View extends EventEmitter {
@@ -23,6 +23,7 @@ class View extends EventEmitter {
         return this.addEventListeners(item);
     }
 
+
     addEventListeners(item) {
         const checkbox = item.querySelector('.checkbox');
         const editButton = item.querySelector('button.edit');
@@ -35,10 +36,19 @@ class View extends EventEmitter {
         return item;
     }
 
+    show(todos) {
+        todos.forEach(todo => {
+            const listItem = this.createListItem(todo);
+
+            this.list.appendChild(listItem);
+        });
+    }
+
     findListItem(id) {
         return this.list.querySelector(`[data-id="${id}"]`);
     }
 
+    // eventlisteners:
     handleAdd(event) {
         event.preventDefault();
 
@@ -81,14 +91,7 @@ class View extends EventEmitter {
         this.emit('remove', listItem.getAttribute('data-id'));
     }
 
-    show(todos) {
-        todos.forEach(todo => {
-            const listItem = this.createListItem(todo);
-
-            this.list.appendChild(listItem);
-        });
-    }
-
+    // adds note's DOM element in the list
     addItem(todo) {
         const listItem = this.createListItem(todo);
 
@@ -96,6 +99,7 @@ class View extends EventEmitter {
         this.list.appendChild(listItem);
     }
 
+    // changes note's status (checked/unchecked)
     toggleItem(todo) {
         const listItem = this.findListItem(todo.id);
         const checkbox = listItem.querySelector('.checkbox');
@@ -109,6 +113,7 @@ class View extends EventEmitter {
         }
     }
 
+    // changes note's text
     editItem(todo) {
         const listItem = this.findListItem(todo.id);
         const label = listItem.querySelector('.title');
@@ -120,6 +125,7 @@ class View extends EventEmitter {
         listItem.classList.remove('editing');
     }
 
+    // removes note from the list
     removeItem(id) {
         const listItem = this.findListItem(id);
 
