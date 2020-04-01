@@ -20,4 +20,4 @@ Accepts input and converts it to commands for the model or view.
 
 Here you can see what you can add, edit and remove notes from the notebook. Backend is written with using NodeJS (npm for package managing), and here I tried to use webpack to manage client(front-end) dependencies.
 
-(https://chackydude.github.io/MyWordSet/public/index.html)
+(https://chackydude.github.io/todo.js/public/index.html)
