@@ -1,5 +1,4 @@
 # todo.js app
-is my pet JS project, to repeat OOP.
 
 Here I tried to use MVC-pattern (Model-View-Controller)
 
